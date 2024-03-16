@@ -1,0 +1,142 @@
+:root {
+    --primary: #025f64;
+    --primary-opacid: rgba(2, 95, 100, 0.51);
+    --secondary: #c55a27;
+    --secondary-2: #a54b21;
+    --secondary-3: #99451e;
+    --light: #faf1ed;
+    --light-opacid: rgba(250, 241, 237, 0.35);
+    --dark: black;
+    --dark-opacid: rgba(10, 10, 10, 0.56);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Roboto", sans-serif;
+}
+
+.subtitle {
+    font-weight: normal;
+}
+
+.button, button {
+    border: 2px solid var(--secondary);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 2rem;
+    color: var(--dark);
+    background-color: var(--secondary);
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover, button:hover {
+    background-color: var(--secondary-2);
+    border: 2px solid var(--secondary-2);
+    color: var(--dark);
+}
+
+.button-secondary {
+    background-color: var(--dark-opacid);
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+}
+
+.button + .button {
+    margin-left: 0.5rem;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    height: 100px;
+    overflow: hidden;
+    padding: 1rem 10%;
+    background-color: var(--light);
+    box-sizing: border-box;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.header img {
+    height: 100%;
+    margin-right: auto;
+}
+
+.nav-item {
+    color: var(--dark);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    color: var(--primary);
+}
+
+.nav-item + .nav-item {
+    margin-left: 1.5rem;
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10%;
+}
+
+.banner--intro {
+    height: 400px;
+    background-image: url("public/haptohuis.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner__color {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-opacid);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    padding: 0 10%;
+}
+
+.banner__color::after {
+    background-color: var(--dark-opacid);
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ' ';
+}
+
+.banner__color img {
+    height: 70vh;
+    margin-right: 2rem;
+    z-index: 5;
+    border-radius: 2rem;
+}
+
+.intro--content {
+    width: 50%;
+    z-index: 5;
+}
+.filler {
+    width: 50%;
+}
