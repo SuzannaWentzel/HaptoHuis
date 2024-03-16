@@ -1,13 +1,21 @@
 :root {
     --primary: #025f64;
     --primary-opacid: rgba(2, 95, 100, 0.51);
+    --primary-2: #04c2cc;
+    --primary-3: #04ced8;
     --secondary: #c55a27;
     --secondary-2: #a54b21;
     --secondary-3: #99451e;
+    --white: white;
     --light: #faf1ed;
     --light-opacid: rgba(250, 241, 237, 0.35);
+    --light-2: #ccbdb7;
     --dark: black;
     --dark-opacid: rgba(10, 10, 10, 0.56);
+
+    --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    --radius-big: 2rem;
+    --page-padding: 150px;
 }
 
 body {
@@ -24,15 +32,23 @@ h1, h2, h3, h4, h5 {
     font-family: "Roboto", sans-serif;
 }
 
+a, p {
+    font-size: 1rem;
+}
+
+p {
+    line-height: 1.25rem;
+}
+
 .subtitle {
     font-weight: normal;
 }
 
 .button, button {
     border: 2px solid var(--secondary);
-    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    box-shadow: var(--shadow);
     padding: 0.5rem 0.75rem;
-    border-radius: 2rem;
+    border-radius: var(--radius-big);
     color: var(--dark);
     background-color: var(--secondary);
     display: inline-block;
@@ -46,14 +62,63 @@ h1, h2, h3, h4, h5 {
     color: var(--dark);
 }
 
-.button-secondary {
+.button-outline {
     background-color: var(--dark-opacid);
     border: 2px solid var(--secondary);
     color: var(--secondary);
 }
 
+.button-secondary {
+    background-color: var(--primary-3);
+    border: 2px solid var(--primary-3);
+}
+
+.button-secondary:hover {
+    background-color: var(--primary-2);
+    border: 2px solid var(--primary-2);
+}
+
+.button-secondary-outline {
+    border: 2px solid var(--primary-3);
+    background: none;
+    color: var(--primary-3);
+}
+
+.button-secondary-outline:hover {
+    background-color: var(--primary-2);
+    border: 2px solid var(--primary-2);
+    color: var(--dark);
+}
+
 .button + .button {
     margin-left: 0.5rem;
+}
+
+.button:has(.icon) {
+    height: 3rem;
+    width: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.button .icon {
+    height: 1rem;
+}
+
+.button--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.button--container .button {
+    display: flex;
+    align-items: center;
 }
 
 .header {
@@ -61,7 +126,7 @@ h1, h2, h3, h4, h5 {
     top: 0;
     height: 100px;
     overflow: hidden;
-    padding: 1rem 10%;
+    padding: 1rem var(--page-padding);
     background-color: var(--light);
     box-sizing: border-box;
     z-index: 10;
@@ -94,8 +159,7 @@ h1, h2, h3, h4, h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 0 10%;
+    padding: 0 var(--page-padding);
 }
 
 .banner--intro {
@@ -113,7 +177,7 @@ h1, h2, h3, h4, h5 {
     justify-content: center;
     align-items: center;
     color: var(--light);
-    padding: 0 10%;
+    padding: 0 var(--page-padding);
 }
 
 .banner__color::after {
@@ -130,7 +194,7 @@ h1, h2, h3, h4, h5 {
     height: 70vh;
     margin-right: 2rem;
     z-index: 5;
-    border-radius: 2rem;
+    border-radius: var(--radius-big);
 }
 
 .intro--content {
@@ -139,4 +203,78 @@ h1, h2, h3, h4, h5 {
 }
 .filler {
     width: 50%;
+}
+
+.info--image {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.info--image img {
+    width: 90%;
+    max-width: 500px;
+    border-radius: var(--radius-big);
+}
+
+.info--content {
+    width: 50%;
+    padding: 5rem 0;
+}
+
+.banner--therapists {
+    display: grid;
+    flex-direction: row;
+    gap: 3rem;
+    grid-template-columns: 400px 1fr 1fr;
+    padding: 10rem var(--page-padding) 5rem 0;
+}
+
+.therapist--intro {
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: var(--shadow);
+    height: 100%;
+    padding: 2rem;
+    padding-left: var(--page-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.therapist {
+    border: 2px solid var(--light-2);
+    border-radius: var(--radius-big);
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--shadow);
+    justify-content: space-between;
+}
+
+.therapist .therapist--photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: -8rem;
+}
+
+.therapist .logo_invinding {
+    height: 100px;
+}
+
+.therapist .logo_katelijn {
+    height: 100px;
+    margin-top: -50px;
+    margin-left: 100px;
+}
+
+.therapist .button--website {
+    margin-right: auto;
+}
+
+.therapist .button + .button {
+    margin-left: 1rem;
 }
