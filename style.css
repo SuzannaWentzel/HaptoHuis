@@ -219,7 +219,7 @@ p {
 
 .info--content {
     width: 50%;
-    padding: 5rem 0;
+    padding: 7rem 0;
 }
 
 .banner--therapists {
@@ -227,7 +227,7 @@ p {
     flex-direction: row;
     gap: 3rem;
     grid-template-columns: 400px 1fr 1fr;
-    padding: 10rem var(--page-padding) 5rem 0;
+    padding: 13rem var(--page-padding) 7rem 0;
 }
 
 .therapist--intro {
