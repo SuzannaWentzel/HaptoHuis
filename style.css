@@ -161,9 +161,10 @@ p {
 
 .banner--intro {
     height: 400px;
-    background-image: url("public/haptohuis.png");
+    background-image: url("public/samen_3.JPG");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .banner__color {
