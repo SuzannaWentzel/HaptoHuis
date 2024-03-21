@@ -11,7 +11,7 @@
     --light-opacid: rgba(250, 241, 237, 0.35);
     --light-2: #ccbdb7;
     --dark: black;
-    --dark-opacid: rgba(10, 10, 10, 0.56);
+    --dark-opacid: rgba(10, 10, 10, 0.25);
 
     --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
     --radius-big: 2rem;
@@ -22,6 +22,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 
 div {
@@ -114,11 +115,16 @@ p {
     justify-content: end;
     width: 100%;
     margin-bottom: 1rem;
+    gap: 1rem;
 }
 
 .button--container .button {
     display: flex;
     align-items: center;
+}
+
+.button--container .button + .button {
+    margin-left: 0;
 }
 
 .header {
@@ -223,7 +229,6 @@ p {
 
 .banner--therapists {
     display: grid;
-    flex-direction: row;
     gap: 3rem;
     grid-template-columns: 400px 1fr 1fr;
     padding: 13rem var(--page-padding) 7rem 0;
@@ -261,7 +266,8 @@ p {
 }
 
 .therapist .logo_invinding {
-    height: 100px;
+    width: 90%;
+    max-width: 200px;
 }
 
 .therapist .logo_katelijn {
@@ -272,14 +278,11 @@ p {
 
 .therapist .button--website {
     margin-right: auto;
+    margin-left: 0;
 }
 
-.therapist .button + .button {
-    margin-left: 1rem;
-}
-
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
     :root {
         --page-padding: 1rem;
     }
@@ -320,10 +323,52 @@ p {
         padding: 0;
         width: 100%;
     }
+
+    .banner--therapists {
+        display: flex;
+        width: 100%;
+        gap: 10rem;
+        padding: 3rem var(--page-padding);
+    }
+
+    .therapist--intro,
+    .therapist--katelijn,
+    .therapist--barbara {
+        width: 100%;
+    }
+
+    .therapist--intro {
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .therapist--intro {
+        order: 1;
+    }
+
+    .therapist--katelijn {
+        order: 2;
+    }
+
+    .therapist--barbara {
+        order: 3;
+    }
+
+    .therapist .lg {
+        display: none;
+    }
+
+    .therapist .sm {
+        display: flex;
+    }
+
+    .button--container {
+        margin: 1rem 0;
+    }
  }
 
- /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
     :root {
         --page-padding: 2rem;
     }
@@ -364,10 +409,52 @@ p {
         padding: 0;
         width: 100%;
     }
+
+    .banner--therapists {
+        display: flex;
+        width: 100%;
+        gap: 10rem;
+        padding: 3rem var(--page-padding);
+    }
+
+    .therapist--intro,
+    .therapist--katelijn,
+    .therapist--barbara {
+        width: 100%;
+    }
+
+    .therapist--intro {
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .therapist--intro {
+        order: 1;
+    }
+
+    .therapist--katelijn {
+        order: 2;
+    }
+
+    .therapist--barbara {
+        order: 3;
+    }
+
+    .therapist .lg {
+        display: none;
+    }
+
+    .therapist .sm {
+        display: flex;
+    }
+
+    .button--container {
+        margin: 1rem 0;
+    }
  }
  
- /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
     :root {
         --page-padding: 3rem;
     }
@@ -400,10 +487,41 @@ p {
         padding: 7rem 0;
         width: 50%;
     }
- }
+
+    .banner--therapists {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .therapist--intro {
+        width: 100vw;
+        margin-bottom: 7rem;
+    }
+
+    .therapist {
+        min-height: 545px;
+    }
+
+    .therapist--katelijn {
+        margin-right: var(--page-padding);
+        flex: 1;
+        order: 2
+    }
+
+    .therapist--barbara {
+        margin-left: var(--page-padding);
+        flex: 1;
+        order: 1
+    }
+}
  
- /* Large devices (laptops/desktops, 992px and up) */
- @media only screen and (min-width: 992px) {
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
     :root {
         --page-padding: 150px;
     }
@@ -413,10 +531,37 @@ p {
         justify-content: space-between;
         flex-direction: row;
     }
- }
+
+    .therapist--intro {
+        padding: 2rem;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 0;
+        min-height: 630px;
+    }
+
+    .banner--therapists {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 13rem var(--page-padding) 7rem 0;
+        flex-wrap: nowrap;
+        clear: both;
+        height: fit-content;
+    }
+
+    .therapist--barbara,
+    .therapist--katelijn {
+        margin: 0;
+        height: 100%;
+        min-height: 630px;
+    }
+}
  
- /* Extra large devices (large laptops and desktops, 1200px and up) */
- @media only screen and (min-width: 1200px) {
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
     :root {
         --page-padding: 250px;
     }
@@ -424,4 +569,29 @@ p {
     .info--image img {
         max-width: 500px;
     }
- } 
+
+    .banner--therapists {
+        gap: 2rem;
+        padding: 13rem var(--page-padding) 7rem 0;
+    }
+
+    .therapist .lg {
+        display: flex;
+    }
+
+    .therapist .sm {
+        display: none;
+    }
+
+    .therapist--katelijn,
+    .therapist--barbara,
+    .therapist--intro {
+        min-height: 600px;
+    }
+
+    .therapist--intro {
+        padding-left: var(--page-padding);
+        width: 500px;
+        flex-shrink: 0;
+    }
+}
