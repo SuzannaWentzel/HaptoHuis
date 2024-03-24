@@ -270,6 +270,11 @@ p {
     margin-top: -8rem;
 }
 
+.therapist .logo_invinding--container {
+    display: flex;
+    justify-content: center;
+}
+
 .therapist .logo_invinding {
     width: 90%;
     max-width: 200px;
@@ -279,6 +284,10 @@ p {
     height: 100px;
     margin-top: -50px;
     margin-left: 100px;
+}
+
+.therapist h2 {
+    align-self: flex-start;
 }
 
 .therapist .button--website {
