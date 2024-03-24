@@ -3,6 +3,7 @@
     --primary-opacid: rgba(2, 95, 100, 0.51);
     --primary-2: #04c2cc;
     --primary-3: #04ced8;
+    --primary-4: #daf1f2;
     --secondary: #c55a27;
     --secondary-2: #a54b21;
     --secondary-3: #99451e;
@@ -227,6 +228,10 @@ p {
     padding: 7rem 0;
 }
 
+.info--content h1 {
+    color: var(--primary);
+}
+
 .banner--therapists {
     display: grid;
     gap: 3rem;
@@ -279,6 +284,12 @@ p {
 .therapist .button--website {
     margin-right: auto;
     margin-left: 0;
+}
+
+footer {
+    padding: 2rem var(--page-padding);
+    background-color: var(--primary-4);
+    text-align: right;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -364,6 +375,10 @@ p {
 
     .button--container {
         margin: 1rem 0;
+    }
+
+    footer {
+        text-align: left;
     }
  }
 
@@ -451,6 +466,10 @@ p {
     .button--container {
         margin: 1rem 0;
     }
+
+    footer {
+        text-align: left;
+    }
  }
  
 /* Medium devices (landscape tablets, 768px and up) */
@@ -518,6 +537,10 @@ p {
         flex: 1;
         order: 1
     }
+
+    footer {
+        text-align: right;
+    }
 }
  
 /* Large devices (laptops/desktops, 992px and up) */
@@ -546,7 +569,7 @@ p {
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        padding: 13rem var(--page-padding) 7rem 0;
+        padding: 13rem var(--page-padding) 3rem 0;
         flex-wrap: nowrap;
         clear: both;
         height: fit-content;
@@ -563,7 +586,7 @@ p {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     :root {
-        --page-padding: 250px;
+        --page-padding: 230px;
     }
 
     .info--image img {
@@ -572,7 +595,7 @@ p {
 
     .banner--therapists {
         gap: 2rem;
-        padding: 13rem var(--page-padding) 7rem 0;
+        padding: 13rem var(--page-padding) 3rem 0;
     }
 
     .therapist .lg {
