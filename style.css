@@ -7,12 +7,15 @@
     --secondary: #c55a27;
     --secondary-2: #a54b21;
     --secondary-3: #99451e;
+    --secondary-4: #d16838;
     --white: white;
     --light: #faf1ed;
+    --light-opacid-1: rgba(250, 241, 237, 0.95);
     --light-opacid: rgba(250, 241, 237, 0.35);
     --light-2: #ccbdb7;
     --dark: black;
     --dark-opacid: rgba(10, 10, 10, 0.25);
+    --dark-opacid-1: rgba(0, 0, 0, 0.9);
 
     --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
     --radius-big: 2rem;
@@ -40,10 +43,15 @@ a, p {
 
 p {
     line-height: 1.25rem;
+    color: var(--dark-opacid-1);
 }
 
 .subtitle {
     font-weight: normal;
+}
+
+.text--light {
+    color: var(--light);
 }
 
 .button, button {
@@ -293,6 +301,15 @@ p {
 .therapist .button--website {
     margin-right: auto;
     margin-left: 0;
+    background-color: var(--secondary-4);
+    border: 2px solid var(--secondary-4);
+    color: var(--dark-opacid-1);
+}
+
+.therapist .button--website:hover {
+    border: 2px solid var(--secondary);
+    background-color: var(--secondary);
+    color: var(--dark);
 }
 
 footer {
