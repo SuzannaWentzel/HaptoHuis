@@ -1,6 +1,7 @@
 :root {
     --primary: #025f64;
     --primary-opacid: rgba(2, 95, 100, 0.51);
+    --primary-opacid-2: rgba(2, 95, 100, 0.75);
     --primary-2: #04c2cc;
     --primary-3: #04ced8;
     --primary-4: #daf1f2;
@@ -100,10 +101,6 @@ p {
     color: var(--dark);
 }
 
-.button + .button {
-    margin-left: 0.5rem;
-}
-
 .button:has(.icon) {
     height: 3rem;
     width: 3em;
@@ -153,7 +150,7 @@ p {
 }
 
 .nav-item {
-    color: var(--dark);
+    color: var(--primary-opacid-2);
     cursor: pointer;
     text-decoration: none;
 }
@@ -180,6 +177,15 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.intro__button--container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .banner__color {
@@ -331,6 +337,7 @@ footer {
 
     .header img {
         margin-bottom: 0.5rem;
+        height: 50%;
     }
 
     .filler {
@@ -495,6 +502,10 @@ footer {
 
     footer {
         text-align: left;
+    }
+
+    .button + .button {
+        margin-left: 0.5rem;
     }
  }
  
