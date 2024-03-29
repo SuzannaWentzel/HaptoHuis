@@ -17,6 +17,7 @@
     --dark: black;
     --dark-opacid: rgba(10, 10, 10, 0.25);
     --dark-opacid-1: rgba(0, 0, 0, 0.9);
+    --dark-opacid-2: rgba(10, 10, 10, 0.4);
 
     --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
     --radius-big: 2rem;
@@ -74,7 +75,7 @@ p {
 }
 
 .button-outline {
-    background-color: var(--dark-opacid);
+    background-color: var(--dark-opacid-2);
     border: 2px solid var(--secondary);
     color: var(--secondary);
 }
@@ -265,6 +266,10 @@ p {
     justify-content: center;
 }
 
+.therapist--intro h1 {
+    margin-bottom: 1rem;
+}
+
 .therapist {
     border: 2px solid var(--light-2);
     border-radius: var(--radius-big);
@@ -324,6 +329,14 @@ footer {
     text-align: right;
 }
 
+footer h3 {
+    margin-bottom: 0.5rem;
+}
+
+footer p {
+    margin-top: 0.5rem;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     :root {
@@ -353,7 +366,8 @@ footer {
     }
 
     .info--image {
-        margin: 3rem 0;
+        margin-top: 4rem;
+        margin-bottom: 1rem;
         width: 100%;
         max-width: 300px;
         justify-content: center;
@@ -443,7 +457,8 @@ footer {
     }
 
     .info--image {
-        margin: 3rem 0;
+        margin-top: 4rem;
+        margin-bottom: 1rem;
         width: 100%;
         justify-content: center;
     }
