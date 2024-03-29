@@ -307,6 +307,8 @@ p {
 
 .therapist h2 {
     align-self: flex-start;
+    margin-bottom: 0;
+    margin-top: 2rem;
 }
 
 .therapist .button--website {
