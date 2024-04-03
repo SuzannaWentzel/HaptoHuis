@@ -194,10 +194,9 @@ p {
     height: 100%;
     background-color: var(--primary-opacid);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: end;
     color: var(--light);
-    padding: 0 var(--page-padding);
+    padding: 5rem var(--page-padding);
 }
 
 .banner__color::after {
@@ -359,6 +358,11 @@ footer p {
         width: 0;
     }
 
+    .banner__color {
+        align-items: center;
+        padding: 0 var(--page-padding);
+    }
+
     .intro--content {
         width: 100%;
     }
@@ -446,12 +450,13 @@ footer p {
         margin-bottom: 0.5rem;
     }
 
-    .filler {
-        width: 30%;
+    .banner__color {
+        align-items: end;
+        padding: 4rem var(--page-padding);
     }
 
     .intro--content {
-        width: 70%;
+        width: 100%;
     }
 
     .banner {
@@ -556,6 +561,11 @@ footer p {
         width: 90%;
     }
 
+    .banner__color {
+        align-items: end;
+        padding: 4rem var(--page-padding);
+    }
+
     .info--content {
         padding: 7rem 0;
         width: 50%;
@@ -617,6 +627,10 @@ footer p {
         justify-content: center;
         margin-bottom: 0;
         min-height: 630px;
+    }
+
+    .banner__color {
+        padding: 5rem var(--page-padding);
     }
 
     .banner--therapists {
