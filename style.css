@@ -144,6 +144,11 @@ p {
     box-sizing: border-box;
     z-index: 10;
     display: flex;
+    transition: height 0.7s;
+}
+
+.header--big {
+    transition: height 0.7s;
 }
 
 .header img {
@@ -207,6 +212,7 @@ p {
     top: 0;
     left: 0;
     content: ' ';
+    transition: height 0.7s;
 }
 
 .banner__color img {
@@ -347,11 +353,22 @@ footer p {
     .header {
         flex-direction: column;
         align-items: start;
+        justify-content: center;
+    }
+
+    .header--big {
+        height: 150px;
     }
 
     .header img {
         margin-bottom: 0.5rem;
         height: 50%;
+    }
+
+    .header--big img {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
     }
 
     .filler {
@@ -362,6 +379,10 @@ footer p {
         align-items: center;
         padding: 0 var(--page-padding);
     }
+
+    body:has(.header--big) .banner__color::after {
+        height: calc(400px + 150px);
+    }    
 
     .intro--content {
         width: 100%;
@@ -444,16 +465,31 @@ footer p {
     .header {
         flex-direction: column;
         align-items: start;
+        justify-content: center;
+    }
+
+    .header--big {
+        height: 150px;
     }
 
     .header img {
         margin-bottom: 0.5rem;
     }
 
+    .header--big img {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+    }
+
     .banner__color {
         align-items: end;
         padding: 4rem var(--page-padding);
     }
+
+    body:has(.header--big) .banner__color::after {
+        height: calc(400px + 150px);
+    }  
 
     .intro--content {
         width: 100%;
@@ -619,6 +655,15 @@ footer p {
         flex-direction: row;
     }
 
+    .header--big {
+        height: 100px;
+    }
+
+    .header--big img {
+        width: auto;
+        height: 100%;
+    }
+
     .therapist--intro {
         padding: 2rem;
         width: 400px;
@@ -632,6 +677,10 @@ footer p {
     .banner__color {
         padding: 5rem var(--page-padding);
     }
+
+    body:has(.header--big) .banner__color::after {
+        height: calc(400px + 100px);
+    }  
 
     .banner--therapists {
         display: flex;
