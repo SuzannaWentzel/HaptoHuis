@@ -227,6 +227,14 @@ p {
     z-index: 5;
 }
 
+.intro--content h1 {
+    margin-bottom: 0.75rem;
+}
+
+.intro--content .subtitle {
+    margin-top: 0.75rem;
+}
+
 .filler {
     width: 50%;
 }
@@ -439,14 +447,6 @@ footer p {
         order: 3;
     }
 
-    .therapist .lg {
-        display: none;
-    }
-
-    .therapist .sm {
-        display: flex;
-    }
-
     .button--container {
         margin: 1rem 0;
     }
@@ -544,14 +544,6 @@ footer p {
 
     .therapist--barbara {
         order: 3;
-    }
-
-    .therapist .lg {
-        display: none;
-    }
-
-    .therapist .sm {
-        display: flex;
     }
 
     .button--container {
@@ -713,14 +705,6 @@ footer p {
     .banner--therapists {
         gap: 2rem;
         padding: 13rem var(--page-padding) 3rem 0;
-    }
-
-    .therapist .lg {
-        display: flex;
-    }
-
-    .therapist .sm {
-        display: none;
     }
 
     .therapist--katelijn,
